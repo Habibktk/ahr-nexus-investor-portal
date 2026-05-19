@@ -1,2 +1,28 @@
-import Link from 'next/link'
-export default function Landing(){return <main className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_right,#064e3b,transparent_35%),#050816]"><section className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6"><div className="max-w-3xl"><p className="mb-4 inline-block rounded-full border border-green-500/30 px-4 py-2 text-green-300">Secure Investor Profit Tracking Portal</p><h1 className="text-5xl font-black leading-tight text-white md:text-7xl">AHR Nexus Investor Portal</h1><p className="mt-6 max-w-2xl text-lg text-slate-300">Professional dashboard for capital, profit, withdrawals, monthly ROI reports, investment timeline, and admin updates.</p><div className="mt-8 flex gap-4"><Link href="/login" className="btn">Investor Login</Link><Link href="/admin" className="btn-dark">Admin Panel</Link></div></div></section></main>}
+export default function Home() {
+  return (
+    <main style={{ minHeight: "100vh", background: "#020617", color: "white", padding: "30px" }}>
+      <p style={{ border: "1px solid white", display: "inline-block", padding: "6px 12px", borderRadius: "20px" }}>
+        Secure Investor Profit Tracking Portal
+      </p>
+
+      <h1 style={{ fontSize: "42px", marginTop: "40px" }}>
+        AHR Nexus Investor Portal
+      </h1>
+
+      <p style={{ fontSize: "20px", maxWidth: "600px" }}>
+        Professional dashboard for capital, profit, withdrawals, monthly ROI reports,
+        investment timeline, and admin updates.
+      </p>
+
+      <div style={{ marginTop: "30px", display: "flex", gap: "15px", flexWrap: "wrap" }}>
+        <button style={{ background: "#22c55e", padding: "15px 30px", borderRadius: "16px", fontSize: "18px", fontWeight: "bold" }}>
+          Investor Login
+        </button>
+
+        <button style={{ background: "#111827", color: "white", padding: "15px 30px", borderRadius: "16px", fontSize: "18px", border: "1px solid #334155" }}>
+          Admin Panel
+        </button>
+      </div>
+    </main>
+  );
+}
