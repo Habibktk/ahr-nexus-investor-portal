@@ -1,0 +1,1 @@
+export default function WhatsAppButton(){ const n=process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '923001234567'; return <a href={`https://wa.me/${n}`} target="_blank" className="fixed bottom-5 right-5 rounded-full bg-green-500 px-5 py-3 font-bold text-black shadow-xl">WhatsApp Support</a> }

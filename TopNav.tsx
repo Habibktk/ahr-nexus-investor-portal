@@ -1,0 +1,4 @@
+'use client'
+import Link from 'next/link'; import { supabase } from '@/lib/supabase-browser'; import { useRouter } from 'next/navigation'
+export default function TopNav(){ const router=useRouter(); async function logout(){ await supabase.auth.signOut(); router.push('/login') }
+return <div className="sticky top-0 z-20 border-b border-slate-800 bg-[#050816]/90 backdrop-blur"><div className="mx-auto flex max-w-7xl items-center justify-between p-4"><Link href="/dashboard" className="font-bold text-xl text-white">AHR Nexus <span className="text-green-400">Investor Portal</span></Link><div className="flex gap-3 text-sm"><Link href="/dashboard">Dashboard</Link><Link href="/timeline">Timeline</Link><Link href="/reports">Reports</Link><Link href="/profile">Profile</Link><Link href="/admin">Admin</Link><button onClick={logout} className="text-red-300">Logout</button></div></div></div> }
